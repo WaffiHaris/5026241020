@@ -21,3 +21,32 @@ Route::get('pert5',function () {
 
 Route::get('dosen', [DosenController::class, 'index']);
 Route::get('biodata', [DosenController::class, 'biodata']);
+
+// dari file FE
+
+Route::get('intro',function () {
+    return view('intro');
+});
+
+Route::get('news',function () {
+    return view('news');
+});
+
+Route::get('responsive',function () {
+    return view('responsive');
+});
+
+Route::get('template', function () {
+    return view('template');
+});
+
+// pertemuan 9 asinkron
+
+Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
+Route::get('/formulir', [PegawaiController::class, 'formulir']);
+Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+//blog
+Route::get('/blog', [BlogController::class, 'home']);
+Route::get('/blog/tentang', [BlogController::class, 'tentang']);
+Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+
