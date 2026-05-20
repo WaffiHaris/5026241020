@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PegawaiDBController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -43,12 +44,15 @@ Route::get('template', function () {
 });
 
 // pertemuan 9 asinkron
-
-Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
+Route::get('/pegawailama/{nama}', [PegawaiController::class, 'index']); // jangan lupa diganti
 Route::get('/formulir', [PegawaiController::class, 'formulir']);
 Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
 //blog
 Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+
+// pertemuan 12 sambung mysql - bagian 9 malasngoding. programmer hanya bikin dari arahan system analyst
+// route CRUD
+Route::get('/pegawai', [PegawaiDBController::class, 'index']);
 
