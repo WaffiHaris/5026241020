@@ -6,6 +6,9 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\SepedamotorController;
+use App\Http\Controllers\Latihan1Controller;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -74,4 +77,16 @@ Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.e
 Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
 
+//sepeda motor
+Route::get('/sepedamotor', [SepedamotorController::class, 'index'])->name('sepedamotor.index');
+Route::get('/sepedamotor/create', [SepedamotorController::class, 'create'])->name('sepedamotor.create');
+Route::post('/sepedamotor', [SepedamotorController::class, 'store'])->name('sepedamotor.store');
+Route::get('/sepedamotor/{id}/edit', [SepedamotorController::class, 'edit'])->name('sepedamotor.edit');
+Route::put('/sepedamotor/{id}', [SepedamotorController::class, 'update'])->name('sepedamotor.update');
+Route::delete('/sepedamotor/{id}', [SepedamotorController::class, 'destroy'])->name('sepedamotor.destroy');
 
+// latihan 1
+Route::get('/latihan1', [Latihan1Controller::class, 'index'])->name('latihan1.index');
+Route::get('/latihan1/beli', [Latihan1Controller::class, 'create'])->name('latihan1.create');
+Route::post('/latihan1', [Latihan1Controller::class, 'store'])->name('latihan1.store');
+Route::delete('/latihan1/{id}', [Latihan1Controller::class, 'destroy'])->name('latihan1.destroy');

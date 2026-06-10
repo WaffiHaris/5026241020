@@ -23,10 +23,10 @@
                     <a class="nav-link active" href="#">Pegawai</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nama Tabel PR</a>
+                    <a class="nav-link" href="{{ route('sepedamotor.index') }}">Sepedamotor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Siswa</a>
+                    <a class="nav-link" href="{{ route('siswa.index') }}">Siswa</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Latihan 1</a>
