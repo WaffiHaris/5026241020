@@ -8,6 +8,7 @@ use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\SepedamotorController;
 use App\Http\Controllers\Latihan1Controller;
+use App\Http\Controllers\NilaiKuliahController;
 
 
 Route::get('/', function () {
@@ -69,7 +70,7 @@ Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
 
-//route CRUD siswa
+//route CRUD siswa (SIAP EAS)
 Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa.index');
 Route::get('/siswa/create', [SiswaController::class, 'create'])->name('siswa.create');
 Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
@@ -90,3 +91,8 @@ Route::get('/latihan1', [Latihan1Controller::class, 'index'])->name('latihan1.in
 Route::get('/latihan1/beli', [Latihan1Controller::class, 'create'])->name('latihan1.create');
 Route::post('/latihan1', [Latihan1Controller::class, 'store'])->name('latihan1.store');
 Route::delete('/latihan1/{id}', [Latihan1Controller::class, 'destroy'])->name('latihan1.destroy');
+
+// latihan 2 - route Nilai Kuliah
+Route::get('/nilaikuliah', [NilaiKuliahController::class, 'indexnilaikuliah'])->name('nilaikuliah.indexnilaikuliah');
+Route::get('/nilaikuliah/tambah', [NilaiKuliahController::class, 'tambah'])->name('nilaikuliah.tambah');
+Route::post('/nilaikuliah/store', [NilaiKuliahController::class, 'store'])->name('nilaikuliah.store');

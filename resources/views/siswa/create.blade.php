@@ -1,6 +1,7 @@
 @extends('template')
 @section('title', 'Data Siswa')
 @section('konten')
+{{-- SIAP EAS --}}
 
     <h2>Tambah Siswa</h2>
 

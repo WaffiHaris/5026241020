@@ -1,3 +1,4 @@
+<!-- SIAP EAS  -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,13 +30,13 @@
                     <a class="nav-link" href="{{ route('siswa.index') }}">Siswa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Latihan 1</a>
+                    <a class="nav-link" href="{{ route('latihan1.index') }}">Latihan 1</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Latihan 2</a>
+                    <a class="nav-link" href="{{ route('nilaikuliah.indexnilaikuliah') }}">Latihan 2</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">EAS</a>
+                    <a class="nav-link" href="#">EAS</a>
                 </li>
             </ul>
         </div>
