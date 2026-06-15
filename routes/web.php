@@ -9,6 +9,7 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\SepedamotorController;
 use App\Http\Controllers\Latihan1Controller;
 use App\Http\Controllers\NilaiKuliahController;
+use App\Http\Controllers\EasController;
 
 
 Route::get('/', function () {
@@ -96,3 +97,8 @@ Route::delete('/latihan1/{id}', [Latihan1Controller::class, 'destroy'])->name('l
 Route::get('/nilaikuliah', [NilaiKuliahController::class, 'indexnilaikuliah'])->name('nilaikuliah.indexnilaikuliah');
 Route::get('/nilaikuliah/tambah', [NilaiKuliahController::class, 'tambah'])->name('nilaikuliah.tambah');
 Route::post('/nilaikuliah/store', [NilaiKuliahController::class, 'store'])->name('nilaikuliah.store');
+
+// eas
+Route::get('/eas', [EasController::class, 'index'])->name('eas.index');
+Route::get('/eas/create', [EasController::class, 'create'])->name('eas.create');
+Route::post('/eas', [EasController::class, 'store'])->name('eas.store');

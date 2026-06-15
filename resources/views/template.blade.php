@@ -36,7 +36,7 @@
                     <a class="nav-link" href="{{ route('nilaikuliah.indexnilaikuliah') }}">Latihan 2</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">EAS</a>
+                    <a class="nav-link" href="{{ route('eas.index') }}">EAS</a>
                 </li>
             </ul>
         </div>
